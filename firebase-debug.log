@@ -1,0 +1,54 @@
+[debug] [2021-09-24T02:48:15.381Z] ----------------------------------------------------------------------
+[debug] [2021-09-24T02:48:15.383Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Anirud\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-09-24T02:48:15.384Z] CLI Version:   9.18.0
+[debug] [2021-09-24T02:48:15.384Z] Platform:      win32
+[debug] [2021-09-24T02:48:15.384Z] Node Version:  v14.17.3
+[debug] [2021-09-24T02:48:15.384Z] Time:          Thu Sep 23 2021 19:48:15 GMT-0700 (Pacific Daylight Time)
+[debug] [2021-09-24T02:48:15.385Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-09-24T02:48:15.435Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-09-24T02:48:15.435Z] > authorizing via signed-in user (aniramch@ucdavis.edu)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Anirud\Downloads\new apache
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using apex-decallab. 
+[debug] [2021-09-24T02:48:20.754Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/apex-decallab [none]
+[debug] [2021-09-24T02:48:21.017Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/apex-decallab 200
+[debug] [2021-09-24T02:48:21.017Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/apex-decallab {"projectId":"apex-decallab","projectNumber":"176367600964","displayName":"APEX-decallab","name":"projects/apex-decallab","resources":{"hostingSite":"apex-decallab"},"state":"ACTIVE"}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2021-09-24T02:49:05.442Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2021-09-24T02:49:05.566Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2021-09-24T02:49:05.567Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"9.0.2","browserURL":"https://www.gstatic.com/firebasejs/9.0.2/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/9.0.2/firebase.tgz"},"live":{"version":"9.0","browserURL":"https://www.gstatic.com/firebasejs/live/9.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/9.0/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/9.0.2/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/9.0.2/firebase-auth/cordova.js","auth/react-native":"https://www.gstatic.com/firebasejs/9.0.2/firebase-auth/react-native.js","functions":"https://www.gstatic.com/firebasejs/9.0.2/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore/lite.js","storage":"https://www.gstatic.com/firebasejs/9.0.2/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/9.0.2/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/9.0.2/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/9.0.2/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/9.0.2/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/9.0.2/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.memory.js"}}
+[debug] [2021-09-24T02:49:05.674Z] Error: C:\Users\Anirud\Downloads\new apache\C:\Users\Anirud\Downloads\new apache\June 12 working version -flexbox - Copy contains invalid WIN32 path characters.
+    at Object.mkdirsSync (C:\Users\Anirud\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\mkdirs\mkdirs-sync.js:18:22)
+    at Object.createFileSync (C:\Users\Anirud\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\fs-extra\lib\ensure\file.js:40:11)
+    at Config.writeProjectFile (C:\Users\Anirud\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:144:12)
+    at C:\Users\Anirud\AppData\Roaming\npm\node_modules\firebase-tools\lib\config.js:162:22
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+[error] 
+[error] Error: An unexpected error has occurred.

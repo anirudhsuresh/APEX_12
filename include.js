@@ -28,7 +28,18 @@ function UpdateprojectInfo() {
   document.getElementById("num_senders").innerHTML = projectInfo.num_senders;
   document.getElementById("email_per_dev").innerHTML =
     projectInfo.email_per_dev;
-
+  document.getElementById("reports_month").innerHTML =
+    projectInfo.from + "~" + projectInfo.to;
+  // document.getElementById("reports_month").innerHTML =
+  //   projectInfo.start_time.split(" ")[0] +
+  //   " " +
+  //   projectInfo.start_time.split(" ")[2] +
+  //   "~" +
+  //   projectInfo.end_time.split(" ")[0];
+  // projectInfo.end_time.split(" ")[0] +
+  // " " +
+  // projectInfo.end_time.split(" ")[2];
+  // console.log(projectInfo.start_time.split(" "));
   // document.getElementById("myButton2").innerHTML = projectInfo.num_commits;
   document.getElementById("num_commits").innerHTML = projectInfo.num_commits;
   document.getElementById("num_committers").innerHTML =
@@ -44,9 +55,8 @@ function UpdateprojectInfo() {
   document.getElementById("pro_title1").innerHTML = projectInfo.project_name;
   document.getElementById("pro_title2").innerHTML = projectInfo.project_name;
   //
-  document.getElementById("month_period_start").innerHTML =
-    projectInfo.start_time;
-  document.getElementById("month_period_end").innerHTML = projectInfo.end_time;
+  document.getElementById("month_period_start").innerHTML = projectInfo.from;
+  document.getElementById("month_period_end").innerHTML = projectInfo.to;
 }
 
 function UpdateMaxIncubation() {

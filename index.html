@@ -12,13 +12,16 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-compat-git.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+
   <link rel="stylesheet" href="./style.css" />
   <style>
     body {
       /* background-color: teal; */
       /* background-color: #e74c3c; */
       /* background-color: #b3e6ff */
+
       background-color: #b3e6ff;
+      /* background-color: #0f6d9c; */
     }
 
     /* #b3e6ff */
@@ -29,7 +32,7 @@
       /* background-color: teal; */
       /* background-color: #e74c3c; */
       flex-wrap: wrap;
-      padding-left: 5px;
+      /* padding-left: 5px; */
       flex-flow: row wrap;
       /*  */
       background: #b3e6ff;
@@ -57,7 +60,7 @@
 
     .box {
       background-color: white;
-      margin: 5px;
+      margin: 8px;
       padding: 8px;
       color: black;
       resize: both;
@@ -66,6 +69,7 @@
       border: 1px solid black;
       /* transition: all .6s ease-in-out;  */
       transition: transform 400ms ease-in-out;
+      filter: drop-shadow(0.75rem 0.75rem 0.75rem #225a75);
       /* filter: drop-shadow(0 0 0.75rem #225a75); */
 
 
@@ -74,13 +78,15 @@
 
     .box1 {
       background-color: white;
-      ;
-      margin: 5px;
+
+      margin: 8px;
       padding: 8px;
       color: black;
       border-radius: 1.2em;
       resize: both;
       flex-direction: column;
+      filter: drop-shadow(0.75rem 0.75rem 0.75rem #225a75);
+      /* filter: drop-shadow(0 0 0.75rem crimson); */
       /* filter: drop-shadow(0 0 0.75rem #225a75); */
       border: 1px solid black;
       /* transition: all .6s ease-in-out;  */
@@ -116,7 +122,7 @@
 
     .a1 {
       flex: 1;
-      padding-top: 10px;
+      /* padding-top: 10px; */
     }
 
     .a2 {
@@ -125,8 +131,11 @@
 
     .b {
       flex: 2;
-      padding-top: 10px;
-      padding-left: 10px;
+
+      /* padding-top: 10px;
+      padding-left: 10px;  */
+      /* padding-bottom: 7px; */
+      /* padding-left: 10px; */
     }
 
     .second_pane {
@@ -173,14 +182,15 @@
     .e {
       flex: 1;
       height: 70px;
-      padding: 10px;
+      /* padding: 10px; */
+      margin-top: 12px;
     }
 
     .c {
       flex: 2;
       height: 300px;
-      padding: 10px;
-
+      /* padding: 10px; */
+      /* margin-top: 12px; */
       overflow: auto;
       resize: both;
     }
@@ -188,7 +198,8 @@
     .d {
       flex: 2;
       height: 300px;
-      padding: 10px;
+      margin-top: 12px;
+      /* padding: 10px; */
       overflow: auto;
       resize: both;
       /* overflow-y: scroll; */
@@ -197,8 +208,8 @@
     .s {
       flex: 2;
       min-height: 380px;
-      padding-left: 10px;
-      padding-top: 10px;
+      /* padding-left: 10px; */
+      /* padding-top: 10px; */
       overflow-y: scroll;
       /* display: inline-block; */
       /* margin: 0 auto; */
@@ -292,6 +303,68 @@
 <body>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
   <script src="project_info.js"></script>
+  <div class="footer">
+
+    <!-- <i class="fa fa-question-circle" style="font-size:48px;color:red"></i> -->
+    <div id="button"></div>
+    <div id="container1">
+
+      <div class="container_g">
+        <footer class="site-footer">
+          <div class="container1">
+            <div class="row_footer">
+              <div class="col-sm-12 col-md-6">
+                <h6>About</h6>
+                <p class="text-justify">Apache Incubator Project Explorer (APEX) is a long-term research project, in
+                  which
+                  models and algorithms to integrate
+                  and advance the analysis and visualization of social networks and technical networks are being
+                  developed.
+                  APEX is the
+                  design and implementation of a software tool intended for research in OSS projects, especially for
+                  ASF
+                  incubator
+                  projects.</p>
+                <p>This Project Sponsored by the <a href="https://nsf.gov/index.jsp">NSF</a> <a
+                    href="https://nsf.gov/awardsearch/showAward?AWD_ID=2020751">Grant</a> to study OSS Sustainability
+                  using
+                  socio-technical and governance data.
+                <p>
+                  <a href="https://nsf.gov/index.jsp"><img src="NSF_4-Color_bitmap_Logo.png" width="70" height="70"></a>
+                  &nbsp
+                  <a style="  color: white;font:san-serif;font-size:26px;"
+                    href="https://decallab.cs.ucdavis.edu/">decallab</a>.
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <h6>contributors</h6>
+                <ul class="footer-links">
+                  <li><a href="https://anirudh-suresh-ramchandran.web.app/">Anirudh
+                      Ramchandran</a></li>
+                  <li><a href="https://www.linkedin.com/in/likangyin/">Likang Yin</a></li>
+                  <li><a href="https://www.cs.ucdavis.edu/~filkov/">Vladimir Filkov</a></li>
+                </ul>
+              </div>
+
+              <div class="col-sm-6 col-md-3">
+                <h6>Quick Links</h6>
+                <ul class="footer-links">
+                  <li><a
+                      href="mailto:filkov@ucdavis.edu?subject=APEX Dashboard!&body=I'm here from testing out APEX!">Contact
+                      us / Contribute</a></li>
+                  <li><a href="https://doi.org/10.5281/zenodo.4480753">Data</a></li>
+                  <li><a href="https://www.cs.ucdavis.edu/~filkov/papers/oss_sustain_forecast.pdf">Papers</a></li>
+
+                </ul>
+              </div>
+
+            </div>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="title">
     <div id="home" class="popupTitle">
@@ -300,8 +373,11 @@
 
       <a class="new" href="https://github.com/lkyin/ASFI_Project_Explorer" target="_blank">ASFI Project Explorer
         (APEX) </a>
+      <i class="fa fa-question-circle"></i>
     </div>
   </div>
+  <!-- <li class="fa fa-question-circle grow"></li> -->
+
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script src="chart_mouseover.js"></script>
@@ -852,7 +928,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="table_search2.js"></script>
     <script type="text/javascript" src="table_search11.js"></script>
+    <!-- end question mark! -->
+
+
   </div>
+  <!--  -->
+
+
+  <!-- </div> -->
 </body>
 
 </html>

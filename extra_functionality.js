@@ -89,3 +89,28 @@ function refreshPage() {
     setScale((currentScale = 1));
   });
 })();
+
+// $(document).scroll(function () {
+//   var y = $(this).scrollTop();
+//   if (y > 200) {
+//     $(".bottomMenu").fadeIn();
+//   } else {
+//     $(".bottomMenu").fadeOut();
+//   }
+// });
+// $(document).scroll(function () {
+//   var y = $(this).scrollTop();
+//   if (y > 200) {
+//     $(".button").fadeIn();
+//   } else {
+//     $(".button").fadeOut();
+//   }
+// });
+$(document).scroll(function () {
+  var y = $(this).scrollTop();
+  if (y > 15) {
+    $(".bottomMenu").fadeIn();
+  } else {
+    $(".bottomMenu").fadeOut();
+  }
+});

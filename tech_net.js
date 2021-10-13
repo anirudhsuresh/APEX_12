@@ -21,8 +21,14 @@ function UpdateTechnicalNet() {
 
   var data = eval(
     readTextFile(
-      `Sep_Network_Data/p${forceProperties.selected_data.project}m${forceProperties.selected_data.month}_commit.json`
+      ` new/September_New_Network/p${forceProperties.selected_data.project}m${forceProperties.selected_data.month}_commit.json`
+      // new/September_New_Network
+      // updated_final_network
       // new_final_network
+      //
+      // Sep_Network_Data
+      // updated_final_network
+      // September_New_Network
       // 16_Sep_network_data
     )
   );

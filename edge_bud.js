@@ -12,10 +12,16 @@ function UpdateEmailNet() {
     .classed("svg-content-responsive", true);
 
   svg.selectAll("*").remove();
+  // var cur_month = 2;
+  // var path1 = `kk/p49m${cur_month}_email.json`;
+  // var data1 = eval(readTextFile(`${path1}`));
+  // console.log(data1);
 
   var data = eval(
     readTextFile(
-      `Sep_Network_Data/p${forceProperties.selected_data.project}m${forceProperties.selected_data.month}_email.json`
+      ` new/September_New_Network/p${forceProperties.selected_data.project}m${forceProperties.selected_data.month}_email.json`
+      // updated_final_network
+      // new/September_New_Network
       // new_final_network
       // 16_Sep_network_data
     )

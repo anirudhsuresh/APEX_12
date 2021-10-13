@@ -127,7 +127,7 @@ function add_current_month() {
 
   var comb_date = month_words + " " + finals_year;
 
-  document.getElementById("reports_month").innerHTML = comb_date;
+  // document.getElementById("reports_month").innerHTML = comb_date - 1;
 }
 
 function add_links() {
