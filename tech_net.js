@@ -236,8 +236,24 @@ g.selectAll(".mainBars").append("text").attr("class","perc")
 function updateAll() {
   var this_project = document.getElementById("txt_ide").value;
   forceProperties.selected_data.project = name_to_id[this_project];
-
+  // agg_slider();
+  $("#chk").prop("checked", false);
   UpdateTechnicalNet();
   UpdateEmailNet();
+  // make_chart();
+  UpdateprojectInfo();
+}
+
+function updateAll_for_range_slider() {
+  var this_project = document.getElementById("txt_ide").value;
+  forceProperties.selected_data.project = name_to_id[this_project];
+  console.log(projectInfo.incubation_time);
+  console.log(typeof projectInfo.incubation_time);
+  var j = 14;
+  console.log(typeof j);
+
+  agg_slider();
+  // UpdateTechnicalNet();
+  // UpdateEmailNet();
   UpdateprojectInfo();
 }

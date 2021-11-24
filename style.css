@@ -1,4 +1,104 @@
 /*  */
+
+/* @import 'https://cdn.skypack.dev/nouislider/dist/nouislider.css'; */
+/*  */
+
+
+
+/* .noUi-connect {
+    background: rgb(62, 79, 226);
+	 
+}
+
+.noUi-slider{
+	width: 10px;
+	height: 10px;
+}
+
+ .noUi-handle {
+    border: 1px solid #D9D9D9;
+	    height: 15px;
+    width: 2px;
+    border-radius: 3px;
+ 
+    right: -5px;
+    background:rgb(231, 101, 101);
+    cursor: default;
+    box-shadow: inset 0 0 1px rgb(0, 134, 52);
+}
+.noUi-tooltip {
+    display: none;
+}
+.noUi-active .noUi-tooltip {
+    display: block;
+}  */
+
+
+.noUi-background {
+    height: 16px;
+}
+.noUi-background.noUi-vertical {
+    height: 200px;
+    width: 16px;
+    margin: 0 auto 30px;
+}
+.noUi-base .noUi-connect {
+    background-color: #0d63bf;
+}
+.noUi-base .noUi-handle {
+    background-color: #0094f0;
+    border: none;
+    border-radius: 6px;
+    box-shadow: none;
+    color: #FFFFFF;
+    display: table;
+    font-size: 15px;
+    height: 31px;
+    left: 0;
+    margin-left: -15.5px;
+    margin-top: -8.5px;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 31px;
+    z-index: 2;
+}
+.noUi-horizontal .noUi-base .noUi-handle {
+    cursor: ew-resize;
+}
+.noUi-vertical .noUi-base .noUi-handle {
+    cursor: ns-resize;
+    margin-left:-8.5px;
+}
+.noUi-base .noUi-handle:hover {
+    background-color: #eb2300;
+}
+.noUi-base .noUi-handle.noUi-active {
+    background-color: #32A17C;
+    z-index: 3;
+}
+.noUi-base .noUi-handle::before {
+    background: transparent;
+    content: attr(data-value);
+    display: table-cell;
+    font-size: 12px;
+    font-weight: 100;
+    position: static;
+    width: 100%;
+    vertical-align: middle;
+}
+.noUi-base .noUi-handle::after {
+    display: none;
+}
+
+
+
+
+
+
+
+/*  */
 /* title css */
 .title .popupTitle {
   width: 99%;
@@ -39,6 +139,8 @@
 .title .popupTitle:hover {
   transform: scale(1.02);
 }
+
+
 /* properties for the month slider */
 /* .controls .force p label {
   margin-right: 0.5em;
@@ -93,7 +195,7 @@ header {
 /* -------------graduation curve ---------------- */
 path {
   stroke: steelblue;
-  /* fill: #3f5efb; */
+  fill: steelblue;
   /* fill: url(#temperature-gradient); */
   /* fill :url(#area-gradient);       */
   stroke-width: 0.5;
@@ -103,7 +205,7 @@ path {
 
 .axis path,
 .axis line {
-  fill: none;
+  /* fill: steelblue; */
   /* stroke: rgb(185, 180, 179); */
   stroke: black;
   stroke-width: 1;
@@ -1700,4 +1802,52 @@ height:100%;
     /* border-top: 1px solid #000; */
     /* background: red; */
     /* z-index: 1; */
+}
+
+
+/*  */
+
+
+.node {
+  font: 300 15px "Helvetica Neue";
+  pointer-events: all;
+}
+
+.node:hover {
+  fill: #000;
+}
+
+.link {
+  stroke: #008a5b;
+  stroke-opacity: 0.5;
+  fill: none;
+  pointer-events: none;
+}
+
+.node:hover,
+.node--source,
+.node--target {
+  font-weight: 700;
+}
+
+.node--source {
+  fill: #0055ff;
+}
+
+.node--target {
+  fill: #f01847;
+}
+
+.link--source,
+.link--target {
+  stroke-opacity: 1;
+  stroke-width: 3px;
+}
+
+.link--source {
+  stroke: #f01847;
+}
+
+.link--target {
+  stroke: #0055ff;
 }

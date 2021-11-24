@@ -12,6 +12,19 @@
   <script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
   <script type="text/javascript" src="//code.jquery.com/jquery-compat-git.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+  <!--  -->
+  <link href="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.min.css" rel="stylesheet">
+  <script src="//cdn.bootcss.com/noUiSlider/8.5.1/nouislider.js"></script>
+
+
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+
+
+
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.2.0/nouislider.js'></script> -->
+
+
 
   <link rel="stylesheet" href="./style.css" />
   <style>
@@ -130,7 +143,7 @@
     }
 
     .b {
-      flex: 2;
+      flex: 1;
 
       /* padding-top: 10px;
       padding-left: 10px;  */
@@ -198,6 +211,17 @@
     .d {
       flex: 2;
       height: 300px;
+      margin-top: 12px;
+      /* padding: 10px; */
+      overflow: auto;
+      resize: both;
+      /* overflow-y: scroll; */
+    }
+
+
+    .d1 {
+      flex: 2;
+      height: 100px;
       margin-top: 12px;
       /* padding: 10px; */
       overflow: auto;
@@ -296,6 +320,48 @@
 
     }
 
+
+    .one_one {
+      display: flex;
+      /* height: 180px; */
+      /* height: auto; */
+      /* width: auto; */
+      /* float: left; */
+      /* min-height: 180px; */
+    }
+
+    .one_a1 {
+      flex: 1;
+      /* min-width: 100px; */
+      height: 20px;
+
+      /* position: absolute; */
+
+      /* padding-top: 10px; */
+    }
+
+    .one_a2 {
+      flex: 1;
+
+
+    }
+
+    .box2 {
+      /* background-color: white; */
+
+      /* margin: 8px; */
+      /* padding: 8px; */
+
+      color: black;
+      /* border-radius: 1.2em; */
+      resize: both;
+      flex-direction: column;
+      /* filter: drop-shadow(0.75rem 0.75rem 0.75rem #225a75); */
+
+      /* border: 1px solid black; */
+
+    }
+
     /* new slider */
   </style>
 </head>
@@ -380,7 +446,8 @@
 
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src="chart_mouseover.js"></script>
+
+
 
   <div class="main">
     <div class="one">
@@ -391,234 +458,249 @@
           </header>
         </div>
         <br />
-        <p>
-          <label>
-            Project
-            <!--  -->
 
-            <select type="text" id="txt_ide" style="max-width:40%;" placeholder="Select a project here :)"
-              oninput="getMonth();yes();myFunction();updateAll(); UpdateMaxIncubation();make_chart();">
-              <!-- <input type="text" id="txt_ide" list="project_n" placeholder="Select a project here :)" -->
-              <!-- oninput="getMonth();yes();myFunction();updateAll(); UpdateMaxIncubation();make_chart();" /> -->
-              <!-- <datalist id="project_n"> -->
-              <option selected>Select a project here :)</option>
-              <option>Abdera [graduated]</option>
-              <option>Accumulo [graduated]</option>
-              <option>Ace [graduated]</option>
-              <option>Activemq [graduated]</option>
-              <option>Agila [retired]</option>
-              <option>Airavata [graduated]</option>
-              <option>Airflow [graduated]</option>
-              <option>Allura [graduated]</option>
-              <option>Alois [retired]</option>
-              <option>Ambari [graduated]</option>
-              <option>Amber [graduated]</option>
-              <option>Any23 [graduated]</option>
-              <option>Ariatosca [retired</option>
-              <option>Aries [graduated]</option>
-              <option>Asterixdb [graduated]</option>
-              <option>Atlas [graduated]</option>
-              <option>Aurora [graduated]</option>
-              <option>Awf [retired]</option>
-              <option>Beam [graduated]</option>
-              <option>Bean validation [graduated]</option>
-              <option>Beehive [graduated]</option>
-              <option>Bigtop [graduated]</option>
-              <option>Bluesky [retired]</option>
-              <option>Blur [retired]</option>
-              <option>Brooklyn [graduated]</option>
-              <option>Buildr [graduated]</option>
-              <option>Calcite [graduated]</option>
-              <option>Carbondata [graduated]</option>
-              <option>Cassandra [graduated]</option>
-              <option>Cayenne [graduated]</option>
-              <option>Celix [graduated]</option>
-              <option>Chemistry [graduated]</option>
-              <option>Chukwa [graduated]</option>
-              <option>Clerezza [graduated]</option>
-              <option>Click [graduated]</option>
-              <option>Climate model diagnostic analyzer [retired]</option>
-              <option>Cloudstack [graduated]</option>
-              <option>Commonsrdf [graduated]</option>
-              <option>Concerted [retired]</option>
-              <option>Cordova [graduated]</option>
-              <option>Corinthia [retired]</option>
-              <option>Couchdb [graduated]</option>
-              <option>Crunch [graduated]</option>
-              <option>Ctakes [graduated]</option>
-              <option>Curator [graduated]</option>
-              <option>Cxf [graduated]</option>
-              <option>Datafu [graduated]</option>
-              <option>Deltacloud [graduated]</option>
-              <option>Deltaspike [graduated]</option>
-              <option>Derby [graduated]</option>
-              <option>Devicemap [graduated]</option>
-              <option>Directmemory [graduated]</option>
-              <option>Directory [graduated]</option>
-              <option>Distributedlog [graduated]</option>
-              <option>Drill [graduated]</option>
-              <option>Droids [retired]</option>
-              <option>Dubbo [graduated]</option>
-              <option>Eagle [graduated]</option>
-              <option>Easyant [graduated]</option>
-              <option>Empire-db [graduated]</option>
-              <option>Esme [graduated]</option>
-              <option>Etch [graduated]</option>
-              <option>Falcon [graduated]</option>
-              <option>Felix [graduated]</option>
-              <option>Fineract [graduated]</option>
-              <option>Flex [graduated]</option>
-              <option>Flink [graduated]</option>
-              <option>Flume [graduated]</option>
-              <option>Fluo [graduated]</option>
-              <option>Ftpserver [graduated]</option>
-              <option>Gearpump [retired]</option>
-              <option>Geode [graduated]</option>
-              <option>Giraph [graduated]</option>
-              <option>Gora [graduated]</option>
-              <option>Gossip [retired]</option>
-              <option>Graffito [retired]</option>
-              <option>Griffin [graduated]</option>
-              <option>Groovy [graduated]</option>
-              <option>Guacamole [graduated]</option>
-              <option>Hadoop development tools (hdt) [retired]</option>
-              <option>Hama [graduated]</option>
-              <option>Harmony [graduated]</option>
-              <option>Hawq [graduated]</option>
-              <option>Hcatalog [graduated] </option>
-              <option>Helix [graduated] </option>
-              <option>Heraldry [retired] </option>
-              <option>Hise [retired] </option>
-              <option>Ibatis [graduated] </option>
-              <option>Ignite [graduated] </option>
-              <option>Impala [graduated] </option>
-              <option>Imperius [retired] </option>
-              <option>Iota [retired] </option>
-              <option>Isis [graduated]</option>
-              <option>Ivy [graduated] </option>
-              <option>Jackrabbit [graduated] </option>
-              <option>Jclouds [graduated] </option>
-              <option>Jdo [graduated] </option>
-              <option>Jena [graduated] </option>
-              <option>Johnzon [graduated] </option>
-              <option>Joshua [graduated] </option>
-              <option>Jspwiki [graduated] </option>
-              <option>Juneau [graduated] </option>
-              <option> Kafka [graduated]</option>
-              <option>Kalumet [retired] </option>
-              <option>Kato [retired] </option>
-              <option>Knox [graduated] </option>
-              <option>Kudu [graduated] </option>
-              <option>Kylin [graduated] </option>
-              <option>Lens [graduated] </option>
-              <option>Lokahi [retired] </option>
-              <option>Lucene.net [graduated] </option>
-              <option>Lucy [graduated] </option>
-              <option>Madlib [graduated] </option>
-              <option> Manifoldcf [graduated]</option>
-              <option>Marmotta [graduated] </option>
-              <option>Mesos [graduated] </option>
-              <option>Metamodel [graduated] </option>
-              <option>Metron [graduated] </option>
-              <option>Mod_ftp [graduated </option>
-              <option> Mrql [retired]</option>
-              <option>Mrunit [graduated] </option>
-              <option>Mynewt [graduated] </option>
-              <option>Netbeans [graduated] </option>
-              <option>Nifi [graduated] </option>
-              <option>Nmaven [retired] </option>
-              <option> Npanday [retired]</option>
-              <option>Nutch [graduated] </option>
-              <option> Nuvem [graduated]</option>
-              <option>Ode [graduated] </option>
-              <option> Odf toolkit [retired]</option>
-              <option>Olingo [graduated] </option>
-              <option>Olio [retired] </option>
-              <option>Onami [graduated] </option>
-              <option> Oodt [graduated]</option>
-              <option>Oozie [graduated] </option>
-              <option>Openaz [retired] </option>
-              <option>Openjpa [graduated] </option>
-              <option>Openmeetings [graduated] </option>
-              <option>Opennlp [graduated] </option>
-              <option>Openoffice.org [graduated] </option>
-              <option>Openwebbeans [graduated] </option>
-              <option>Openwhisk [graduated] </option>
-              <option>Parquet [graduated] </option>
-              <option>Pdfbox [graduated] </option>
-              <option>Phoenix [graduated] </option>
-              <option> Photark [retired]</option>
-              <option>Pig [graduated] </option>
-              <option>Pirk [retired] </option>
-              <option> Pivot [graduated]</option>
-              <option>Predictionio [graduated] </option>
-              <option>Provisionr [retired] </option>
-              <option>Pulsar [graduated] </option>
-              <option>Qpid [graduated] </option>
-              <option>Quickstep [retired] </option>
-              <option> Ranger [graduated</option>
-              <option>Rave [graduated]</option>
-              <option>Reef [graduated] </option>
-              <option>Ripple [retired] </option>
-              <option> River [graduated]</option>
-              <option>Rocketmq [graduated] </option>
-              <option>Roller [graduated] </option>
-              <option>S4 [retired] </option>
-              <option>Samza [graduated] </option>
-              <option>Sanselan [graduated] </option>
-              <option> Sentry [graduated]</option>
-              <option>Servicecomb [graduated]</option>
-              <option>Servicemix [graduated] </option>
-              <option>Shindig [graduated] </option>
-              <option>Shiro [graduated]</option>
-              <option>Sirona [retired] </option>
-              <option>Sis [graduated] </option>
-              <option>Skywalking [graduated] </option>
-              <option>Slider [retired] </option>
-              <option>Sling [graduated] </option>
-              <option>Solr [graduated] </option>
-              <option>Spamassassin [graduated] </option>
-              <option>Spark [graduated]</option>
-              <option>Sqoop [graduated] </option>
-              <option> Stanbol [graduated]</option>
-              <option> Stdcxx [graduated]</option>
-              <option> Stonehenge [retired]</option>
-              <option>Storm [graduated]</option>
-              <option>Stratos [graduated]</option>
-              <option>Streams [graduated]</option>
-              <option> Syncope [graduated]</option>
-              <option>Systemml [graduated]</option>
-              <option>Tashi [retired]</option>
-              <option>Tez [graduated]</option>
-              <option>Thrift [graduated]</option>
-              <option>Tika [graduated]</option>
-              <option>Traffic control [graduated]</option>
-              <option>Traffic server [graduated]</option>
-              <option>Triplesoup [retired]</option>
-              <option>Tuscany [graduated]</option>
-              <option>Twill [graduated]</option>
-              <option>Uima [graduated]</option>
-              <option>Unomi [graduated]</option>
-              <option>Usergrid [graduated]</option>
-              <option>Vcl [graduated]</option>
-              <option>Wave [retired]</option>
-              <option>Whirr [graduated]</option>
-              <option>Wicket [graduated]</option>
-              <option>Xap [retired]</option>
-              <option>Yoko [retired]</option>
-              <option>Zeppelin [graduated]</option>
-              <option>Zeta components [retired]</option>
-              <option>Zipkin [retired]</option>
-              <!-- </datalist> -->
-            </select>
-          </label>
+        <div class="one_one">
+          <div class="one_a1 box2" style="text-align: center" ;>
+            <label>
+              Project
+              <!--  -->
 
-          <!-- <button type="submit" onClick="refreshPage()">Refresh Button</button> -->
-          <button class="btn-success has-spinner" id="start_translation_button" onClick="refreshPage()"
-            style="background-color: white; color: black; opacity: 0.9">
-            <span class="spinner"><i class="fa fa-refresh fa-spin"></i></span>Refresh
-          </button>
-        </p>
+              <select type="text" id="txt_ide" style="max-width:40%;" placeholder="Select a project here :)"
+                oninput="getMonth();yes();myFunction();updateAll();make_chart();UpdateMaxIncubation();">
+
+
+                <option selected>Select a project here :)</option>
+                <option>Abdera [graduated]</option>
+                <option>Accumulo [graduated]</option>
+                <option>Ace [graduated]</option>
+                <option>Activemq [graduated]</option>
+                <option>Agila [retired]</option>
+                <option>Airavata [graduated]</option>
+                <option>Airflow [graduated]</option>
+                <option>Allura [graduated]</option>
+                <option>Alois [retired]</option>
+                <option>Ambari [graduated]</option>
+                <option>Amber [graduated]</option>
+                <option>Any23 [graduated]</option>
+                <option>Ariatosca [retired</option>
+                <option>Aries [graduated]</option>
+                <option>Asterixdb [graduated]</option>
+                <option>Atlas [graduated]</option>
+                <option>Aurora [graduated]</option>
+                <option>Awf [retired]</option>
+                <option>Beam [graduated]</option>
+                <option>Bean validation [graduated]</option>
+                <option>Beehive [graduated]</option>
+                <option>Bigtop [graduated]</option>
+                <option>Bluesky [retired]</option>
+                <option>Blur [retired]</option>
+                <option>Brooklyn [graduated]</option>
+                <option>Buildr [graduated]</option>
+                <option>Calcite [graduated]</option>
+                <option>Carbondata [graduated]</option>
+                <option>Cassandra [graduated]</option>
+                <option>Cayenne [graduated]</option>
+                <option>Celix [graduated]</option>
+                <option>Chemistry [graduated]</option>
+                <option>Chukwa [graduated]</option>
+                <option>Clerezza [graduated]</option>
+                <option>Click [graduated]</option>
+                <option>Climate model diagnostic analyzer [retired]</option>
+                <option>Cloudstack [graduated]</option>
+                <option>Commonsrdf [graduated]</option>
+                <option>Concerted [retired]</option>
+                <option>Cordova [graduated]</option>
+                <option>Corinthia [retired]</option>
+                <option>Couchdb [graduated]</option>
+                <option>Crunch [graduated]</option>
+                <option>Ctakes [graduated]</option>
+                <option>Curator [graduated]</option>
+                <option>Cxf [graduated]</option>
+                <option>Datafu [graduated]</option>
+                <option>Deltacloud [graduated]</option>
+                <option>Deltaspike [graduated]</option>
+                <option>Derby [graduated]</option>
+                <option>Devicemap [graduated]</option>
+                <option>Directmemory [graduated]</option>
+                <option>Directory [graduated]</option>
+                <option>Distributedlog [graduated]</option>
+                <option>Drill [graduated]</option>
+                <option>Droids [retired]</option>
+                <option>Dubbo [graduated]</option>
+                <option>Eagle [graduated]</option>
+                <option>Easyant [graduated]</option>
+                <option>Empire-db [graduated]</option>
+                <option>Esme [graduated]</option>
+                <option>Etch [graduated]</option>
+                <option>Falcon [graduated]</option>
+                <option>Felix [graduated]</option>
+                <option>Fineract [graduated]</option>
+                <option>Flex [graduated]</option>
+                <option>Flink [graduated]</option>
+                <option>Flume [graduated]</option>
+                <option>Fluo [graduated]</option>
+                <option>Ftpserver [graduated]</option>
+                <option>Gearpump [retired]</option>
+                <option>Geode [graduated]</option>
+                <option>Giraph [graduated]</option>
+                <option>Gora [graduated]</option>
+                <option>Gossip [retired]</option>
+                <option>Graffito [retired]</option>
+                <option>Griffin [graduated]</option>
+                <option>Groovy [graduated]</option>
+                <option>Guacamole [graduated]</option>
+                <option>Hadoop development tools (hdt) [retired]</option>
+                <option>Hama [graduated]</option>
+                <option>Harmony [graduated]</option>
+                <option>Hawq [graduated]</option>
+                <option>Hcatalog [graduated] </option>
+                <option>Helix [graduated] </option>
+                <option>Heraldry [retired] </option>
+                <option>Hise [retired] </option>
+                <option>Ibatis [graduated] </option>
+                <option>Ignite [graduated] </option>
+                <option>Impala [graduated] </option>
+                <option>Imperius [retired] </option>
+                <option>Iota [retired] </option>
+                <option>Isis [graduated]</option>
+                <option>Ivy [graduated] </option>
+                <option>Jackrabbit [graduated] </option>
+                <option>Jclouds [graduated] </option>
+                <option>Jdo [graduated] </option>
+                <option>Jena [graduated] </option>
+                <option>Johnzon [graduated] </option>
+                <option>Joshua [graduated] </option>
+                <option>Jspwiki [graduated] </option>
+                <option>Juneau [graduated] </option>
+                <option> Kafka [graduated]</option>
+                <option>Kalumet [retired] </option>
+                <option>Kato [retired] </option>
+                <option>Knox [graduated] </option>
+                <option>Kudu [graduated] </option>
+                <option>Kylin [graduated] </option>
+                <option>Lens [graduated] </option>
+                <option>Lokahi [retired] </option>
+                <option>Lucene.net [graduated] </option>
+                <option>Lucy [graduated] </option>
+                <option>Madlib [graduated] </option>
+                <option> Manifoldcf [graduated]</option>
+                <option>Marmotta [graduated] </option>
+                <option>Mesos [graduated] </option>
+                <option>Metamodel [graduated] </option>
+                <option>Metron [graduated] </option>
+                <option>Mod_ftp [graduated </option>
+                <option> Mrql [retired]</option>
+                <option>Mrunit [graduated] </option>
+                <option>Mynewt [graduated] </option>
+                <option>Netbeans [graduated] </option>
+                <option>Nifi [graduated] </option>
+                <option>Nmaven [retired] </option>
+                <option> Npanday [retired]</option>
+                <option>Nutch [graduated] </option>
+                <option> Nuvem [graduated]</option>
+                <option>Ode [graduated] </option>
+                <option> Odf toolkit [retired]</option>
+                <option>Olingo [graduated] </option>
+                <option>Olio [retired] </option>
+                <option>Onami [graduated] </option>
+                <option> Oodt [graduated]</option>
+                <option>Oozie [graduated] </option>
+                <option>Openaz [retired] </option>
+                <option>Openjpa [graduated] </option>
+                <option>Openmeetings [graduated] </option>
+                <option>Opennlp [graduated] </option>
+                <option>Openoffice.org [graduated] </option>
+                <option>Openwebbeans [graduated] </option>
+                <option>Openwhisk [graduated] </option>
+                <option>Parquet [graduated] </option>
+                <option>Pdfbox [graduated] </option>
+                <option>Phoenix [graduated] </option>
+                <option> Photark [retired]</option>
+                <option>Pig [graduated] </option>
+                <option>Pirk [retired] </option>
+                <option> Pivot [graduated]</option>
+                <option>Predictionio [graduated] </option>
+                <option>Provisionr [retired] </option>
+                <option>Pulsar [graduated] </option>
+                <option>Qpid [graduated] </option>
+                <option>Quickstep [retired] </option>
+                <option> Ranger [graduated</option>
+                <option>Rave [graduated]</option>
+                <option>Reef [graduated] </option>
+                <option>Ripple [retired] </option>
+                <option> River [graduated]</option>
+                <option>Rocketmq [graduated] </option>
+                <option>Roller [graduated] </option>
+                <option>S4 [retired] </option>
+                <option>Samza [graduated] </option>
+                <option>Sanselan [graduated] </option>
+                <option> Sentry [graduated]</option>
+                <option>Servicecomb [graduated]</option>
+                <option>Servicemix [graduated] </option>
+                <option>Shindig [graduated] </option>
+                <option>Shiro [graduated]</option>
+                <option>Sirona [retired] </option>
+                <option>Sis [graduated] </option>
+                <option>Skywalking [graduated] </option>
+                <option>Slider [retired] </option>
+                <option>Sling [graduated] </option>
+                <option>Solr [graduated] </option>
+                <option>Spamassassin [graduated] </option>
+                <option>Spark [graduated]</option>
+                <option>Sqoop [graduated] </option>
+                <option> Stanbol [graduated]</option>
+                <option> Stdcxx [graduated]</option>
+                <option> Stonehenge [retired]</option>
+                <option>Storm [graduated]</option>
+                <option>Stratos [graduated]</option>
+                <option>Streams [graduated]</option>
+                <option> Syncope [graduated]</option>
+                <option>Systemml [graduated]</option>
+                <option>Tashi [retired]</option>
+                <option>Tez [graduated]</option>
+                <option>Thrift [graduated]</option>
+                <option>Tika [graduated]</option>
+                <option>Traffic control [graduated]</option>
+                <option>Traffic server [graduated]</option>
+                <option>Triplesoup [retired]</option>
+                <option>Tuscany [graduated]</option>
+                <option>Twill [graduated]</option>
+                <option>Uima [graduated]</option>
+                <option>Unomi [graduated]</option>
+                <option>Usergrid [graduated]</option>
+                <option>Vcl [graduated]</option>
+                <option>Wave [retired]</option>
+                <option>Whirr [graduated]</option>
+                <option>Wicket [graduated]</option>
+                <option>Xap [retired]</option>
+                <option>Yoko [retired]</option>
+                <option>Zeppelin [graduated]</option>
+                <option>Zeta components [retired]</option>
+                <option>Zipkin [retired]</option>
+                <!-- </datalist> -->
+              </select>
+            </label>
+          </div>
+
+          <!-- <div class="one_a2 box2" style="text-align: center" ;>
+            <button class="btn-success has-spinner" id="start_translation_button" onClick="refreshPage()"
+              style="background-color: white; color: black; opacity: 0.9">
+              <span class="spinner"><i class="fa fa-refresh fa-spin"></i></span>Refresh
+            </button>
+
+
+          </div> -->
+
+          <div class="one_a2 box2" style="text-align: center" ;>
+            <input class="btn-success has-spinner" type="button" value="Open Parallel Window" onclick="openWin()">
+          </div>
+
+          <div class="one_a2 box2" style="text-align: center" ;>
+            <small class="pro_tit"><input type="checkbox" id="make_range_slider">Range Slider</input></small>
+          </div>
+        </div>
+
+
         <p>
           <label>
             <a id="from"> </a>
@@ -626,37 +708,43 @@
             <a id="to"> </a>
           </label>
         </p>
+        <div id="hideableDiv2" class="well">
+          <label>
+            Month
+            <output class="month_name" id="Month">1</output>
+            <!-- <input id="amount" type="number" value="0" min="1" max="90" oninput="MaxIncubation.value=amount.value";getMonth();yes();forceProperties.selected_data.month=value; updateAll(); /> -->
+            <input id="MaxIncubation" type="range" min="1" max="90" value="1" step="1"
+              oninput="getMonth();yes();update_month_id(MaxIncubation.value); forceProperties.selected_data.month=value; updateAll();" />
+          </label>
+        </div>
 
-        <label>
-          Month
-          <output class="month_name" id="Month">1</output>
-          <!-- <input id="amount" type="number" value="0" min="1" max="90" oninput="MaxIncubation.value=amount.value";getMonth();yes();forceProperties.selected_data.month=value; updateAll(); /> -->
-          <input id="MaxIncubation" type="range" min="1" max="90" value="1" step="1"
-            oninput="getMonth();yes();update_month_id(MaxIncubation.value); forceProperties.selected_data.month=value; updateAll();" />
-        </label>
-        <br />
-        <br />
 
-        <!-- </script> -->
+
+
+        <div id="hideableDiv" class="well">
+
+          <div id="html5"></div>
+
+        </div>
+
+        <br />
+        <!-- <br /> -->
+
         <label class="s_date">Starts:
           <a id="start"></a>
         </label>
 
-        <!-- <div class="end_date"> -->
+
 
         <label class="end_date">Ends:
 
           <a id="end"></a>
         </label>
-        <!-- </div> -->
+
       </div>
-      <!-- <div class="a2 box" style="text-align:left";>
-  <p class="outset">
-    <a id="intro">About the project</a>
-  </p> 
-</div> -->
+
       <script src="https://d3js.org/d3.v4.min.js"></script>
-      <script src="chart_mouseover.js"></script>
+      <!-- <script src="chart_mouseover.js"></script> -->
 
       <div class="b box">
         <div class="resize box_H">
@@ -674,7 +762,7 @@
         </div>
         <br />
         <div id="my_dataviz"></div>
-        <script src="chart_mouseover.js"></script>
+
       </div>
     </div>
     <script src="./js/d3.v4.min.js"></script>
@@ -725,10 +813,14 @@
             </label></p> -->
         </div>
         <div class="d box">
+
           <div class="resize box_H">
             <header>Project Reports</header>
           </div>
           <br />
+
+          <div class="holder"></div>
+          <div id='content' class="msg1"></div>
 
           <p>
             <label>Link to Actual Report:
@@ -755,6 +847,12 @@
             <p><output id="textss">Project Reports</output></p>
           </div>
         </div>
+        <!-- <div class="d1 box"> -->
+        <!-- <div class="holder"></div>
+
+
+          <div id='content' class="msg1"></div>
+        </div> -->
       </div>
 
       <script src="importantUpdate.js"></script>
@@ -766,11 +864,13 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
       <script src="./script.js"></script>
-
+      <script src="extra_functionality.js"></script>
       <script src="include.js"></script>
       <script src="d3.v3.js"></script>
       <script src="tech_net.js"></script>
       <script src="edge_bud.js"></script>
+      <script src="Range_Slider_Email_Network.js"></script>
+      <script src="Force_Connected_Email_Net.js"></script>
 
       <div class="four">
         <div class="five1">
@@ -784,6 +884,9 @@
                       Social Network &nbsp;&nbsp;&nbsp;
                       <small class="pro_tit">Current Project:</small>&nbsp;<small class="pro_tit"
                         id="pro_title1"></small>
+                      <input type="checkbox" id="chk"> <small class="pro_tit">Switch Graphs</small></input>
+
+
                     </header>
 
                   </div>
@@ -868,14 +971,6 @@
                 </div>
                 <svg title="Technical Network" id="rightsvg" width="700" height="280"></svg>
 
-                <!-- <div class="resize1 box">
-                  <div id="tooltip_man">
-                    <div id="anim">
-                      <span class="tooltip" style="color: #fff; font-size: 15px; opacity: 0.7" 15px;opacity: 0.5;
-                        data-tooltip="^:Mentors.*:Committers">&#10067;</span>
-                    </div>
-                  </div>
-                </div> -->
 
               </div>
             </div>
@@ -894,14 +989,7 @@
                   <div class="popman1"></div>
                 </div>
               </div>
-              <!-- <div class="small_box1">  
-              <button href="#" id="tglr1" class="button" title="Popover Header"><span><a id="current_node1">HEy its working !</a></span></button>
 
-              <div id="customdiv1" style="display: none">
-                  <div id="popover-content1" class="hide">
-                  <div class="popman1"></div></div>
-                </div>
-              </div> -->
             </div>
             <div class="six">
               <div class="f box1">
@@ -921,21 +1009,45 @@
         </div>
       </div>
     </div>
+
+    <script src="no_ui_slider.js"></script>
+    <!-- <script type="module" src="no_ui_slider.js"></script> -->
+    <script src="hiding_not_hiding.js"></script>
     <script src="d3.v3.js"></script>
-    <script src="extra_functionality.js"></script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="table_search2.js"></script>
     <script type="text/javascript" src="table_search11.js"></script>
+
+    <script src="tech_merged.js"></script>
     <!-- end question mark! -->
 
-
+    <script src="chart_mouseover.js"></script>
+    <!-- <script src="make_chart_alt.js"></script> -->
   </div>
   <!--  -->
 
+  <script>
 
+    console.log($("#chk").is(":checked"));
+
+    if ($("#chk").is(":checked")) console.log("checked");
+    else {
+
+      console.log("unchecked");
+    }
+  </script>
+  <script src="make_chart_alt.js"></script>
   <!-- </div> -->
+
+
+  <script>
+    function openWin() {
+      window.open("http://localhost:8000/June%2012%20working%20version%20-flexbox%20-%20Copy/");
+    }
+  </script>
 </body>
 
 </html>

@@ -1,0 +1,1 @@
+[{"imports": ["BC-Email"], "name": "Jboudart"}, {"imports": [], "name": "BC-Email"}, {"imports": [], "name": "Sbodewig"}, {"imports": ["Jboudart", "BC-Email", "Sbodewig"], "name": "Nicolas.lalevee"}]

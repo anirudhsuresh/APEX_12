@@ -1,0 +1,11 @@
+$("#hideableDiv").hide();
+
+// Listen for the checkbox to be checked
+$("input[type=checkbox]").click(function () {
+  if (this.checked) {
+    console.log("fffffhello");
+    $("#hideableDiv").show();
+  } else {
+    $("#hideableDiv").hide();
+  }
+});

@@ -17,6 +17,7 @@ function UpdateEmailNet() {
   // var data1 = eval(readTextFile(`${path1}`));
   // console.log(data1);
 
+  // console.log(new_empty, first_data);
   var data = eval(
     readTextFile(
       ` new/September_New_Network/p${forceProperties.selected_data.project}m${forceProperties.selected_data.month}_email.json`

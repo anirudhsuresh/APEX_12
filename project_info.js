@@ -33,7 +33,7 @@ forceProperties = {
   // },
   // load the selected data
   selected_data: {
-    project: 183,
+    project: 1,
     month: 1,
     ntype: "email",
   },
@@ -61,3 +61,5 @@ function readTextFile(file) {
 
 var name_to_id = JSON.parse(readTextFile("name_to_id.json"));
 // slider gradient
+
+//

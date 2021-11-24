@@ -212,3 +212,150 @@ function add_links() {
     document.getElementById("repo_link").innerHTML = "No link for this month";
   }
 }
+
+// duplicate yes functions for parallel window
+
+function yes1(cu_month) {
+  var proj = myFunction();
+  var month = cu_month;
+
+  var m = month + ".txt";
+
+  var link = "data1/" + proj + "/" + m;
+  var paths = `${link}`;
+
+  var read = readTextFile1(paths);
+  document.getElementById("textss").value = read;
+  add_links1();
+  add_current_month1();
+}
+
+function add_current_month1() {
+  var month = document.getElementById("Month").value;
+  var start_date = JSON.parse(readTextFile("start_date_dict.json"));
+  var name_proj = document.getElementById("txt_ide").value;
+  var c_month = JSON.parse(readTextFile("month_names_dict.json"));
+  var p_idss = name_to_id[name_proj];
+
+  var ac_date = start_date[p_idss];
+
+  document.getElementById("reports_month").innerHTML = comb_date;
+
+  if (month > 12) {
+    var re_years = parseInt(month / 12);
+    var re_months = parseInt(month % 12);
+  } else {
+    var re_years = 0;
+    var re_months = month;
+  }
+
+  var res = ac_date.split("/");
+
+  // will add all the dates and make the actaul year and month
+  var f_year = +re_years + +res[2];
+  var f_month = +re_months + +res[0];
+  //
+
+  console.log(f_year, f_month);
+  //
+  if (f_month > 12) {
+    var fi_year = parseInt(f_month / 12);
+    var fi_month = parseInt(f_month % 12);
+  } else {
+    var fi_year = 0;
+    var fi_month = f_month;
+  }
+
+  var month_inti = fi_month;
+  var month_words = c_month[month_inti];
+  var ac_proj = name_proj;
+  var project_name = ac_proj.split("[");
+  var finals_year = +fi_year + +f_year;
+
+  var comb_date = month_words + " " + finals_year;
+
+  // document.getElementById("reports_month").innerHTML = comb_date - 1;
+}
+
+function add_links1() {
+  if (flag == 0) {
+    var month = document.getElementById("Month").value;
+    var start_date = JSON.parse(readTextFile("start_date_dict.json"));
+    var name_proj = document.getElementById("txt_ide").value;
+    var c_month = JSON.parse(readTextFile("month_names_dict.json"));
+    var p_idss = name_to_id[name_proj];
+
+    var ac_date = start_date[p_idss];
+
+    document.getElementById("reports_month").innerHTML = comb_date;
+
+    if (month > 12) {
+      var re_years = parseInt(month / 12);
+      var re_months = parseInt(month % 12);
+    } else {
+      var re_years = 0;
+      var re_months = month;
+    }
+
+    var res = ac_date.split("/");
+
+    // will add all the dates and make the actaul year and month
+    var f_year = +re_years + +res[2];
+    var f_month = +re_months + +res[0];
+    //
+
+    console.log(f_year, f_month);
+    //
+    if (f_month > 12) {
+      var fi_year = parseInt(f_month / 12);
+      var fi_month = parseInt(f_month % 12);
+    } else {
+      var fi_year = 0;
+      var fi_month = f_month;
+    }
+
+    var month_inti = fi_month;
+    var month_words = c_month[month_inti];
+    var ac_proj = name_proj;
+    var project_name = ac_proj.split("[");
+    var finals_year = +fi_year + +f_year;
+
+    var comb_date = month_words + " " + finals_year;
+    document.getElementById("reports_month").innerHTML = comb_date;
+    // console.log(comb_date);
+
+    var ac_proj = name_proj;
+    var project_name = ac_proj.split("[");
+    if (finals_year == 2005) {
+      var final_link =
+        "https://cwiki.apache.org/confluence/display/INCUBATOR/IncubatorBoardReport2005Q4";
+    } else if (finals_year == 2006) {
+      if (month_words == "January") {
+        var final_link =
+          "https://cwiki.apache.org/confluence/display/INCUBATOR/IncubatorBoardReport2006Q1";
+      } else if (month_words == "February") {
+        var final_link =
+          "https://cwiki.apache.org/confluence/display/INCUBATOR/IncubatorBoardReport2006Q1";
+      } else {
+        var final_link =
+          "https://cwiki.apache.org/confluence/display/INCUBATOR/" +
+          month_words +
+          finals_year +
+          "#" +
+          project_name[0];
+      }
+    } else {
+      var final_link =
+        "https://cwiki.apache.org/confluence/display/INCUBATOR/" +
+        month_words +
+        finals_year +
+        "#" +
+        project_name[0];
+    }
+
+    document.getElementById("repo_link").innerHTML =
+      '<a href="' + final_link + '" target="_blank"> Link </a>';
+  } else {
+    document.getElementById("repo_link").innerHTML = "No link for this month";
+  }
+}
