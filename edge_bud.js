@@ -27,6 +27,7 @@ function UpdateEmailNet() {
       // 16_Sep_network_data
     )
   );
+  console.log(`new/September_New_Network/p${forceProperties.selected_data.project}m${forceProperties.selected_data.month}_email.json`)
   // readTextFile(
   // sorting data
   // var data_s = data.sort(function (a, b) {
